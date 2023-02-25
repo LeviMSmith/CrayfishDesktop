@@ -32,7 +32,10 @@ tracked_directories := \
 	$(CONFIG)/neofetch \
 	$(CONFIG)/nnn \
 	$(CONFIG)/spicetify \
+	$(CONFIG)/polybar \
 	$(DATA)/themes \
+	$(DATA)/fonts \
+
 											
 home-tracked_files := $(subst $(HOME),,$(tracked_files))
 home-tracked_directories := $(subst $(HOME),,$(tracked_directories))

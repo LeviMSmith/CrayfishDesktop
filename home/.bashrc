@@ -18,7 +18,7 @@ PS1='[\u@\h \W]\$ '
 
 #export TERMINAL='bin/xterm'
 export NNN_OPTS="H"
-export EDITOR=vim
+export EDITOR=nvim
 
 export PATH="~/.local/bin:$PATH"
 #export DISTCC_HOSTS="localhost/4 ldb-001.lan/16" 
