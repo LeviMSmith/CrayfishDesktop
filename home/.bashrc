@@ -23,7 +23,7 @@ export EDITOR=nvim
 export PATH="~/.local/bin:$PATH"
 #export DISTCC_HOSTS="localhost/4 ldb-001.lan/16" 
 
-#if [[ -z $DISPLAY ]] && [[ ! -n "${SSH_TTY}" ]]; then exec startx; fi
+if [[ -z $DISPLAY ]] && [[ ! -n "${SSH_TTY}" ]]; then exec startx; fi
 
 neofetch
 alias clear='clear && neofetch'
