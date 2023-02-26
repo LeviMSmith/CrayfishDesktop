@@ -1,7 +1,3 @@
-ifeq ($(USER), root)
-	$(error This script was not made to be run as root!)
-endif
-
 ifndef HOME
 	$(error Home variable not set!)
 endif
@@ -40,11 +36,25 @@ tracked_directories := \
 	$(DATA)/themes \
 	$(DATA)/fonts \
 
-											
+requisites := \
+	ttc-iosevka \
+	rofi \
+	kitty \
+	fish \
+	gnome-themes-extra \
+	gtk-engine-murrine \
+	polybar \
+	i3 \
+	xorg \
+	neovim \
+	picom \
+	xorg-xinit \
+
 home-tracked_files := $(subst $(HOME),,$(tracked_files))
 home-tracked_directories := $(subst $(HOME),,$(tracked_directories))
 
 .PHONY: package install uninstall $(home-tracked_files) $(home-tracked_directories)
+.PHONY: requisites
 
 package: $(home-tracked_files) $(home-tracked_directories)
 
@@ -58,3 +68,6 @@ $(home-tracked_directories):
 
 install:
 	cp -rub $(package_home)/* $(HOME)/
+
+requisites:
+	pacman -S $(requisites)

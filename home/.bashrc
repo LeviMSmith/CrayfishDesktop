@@ -28,5 +28,4 @@ then
   startx
 else
   neofetch
-  exec fish
 fi
