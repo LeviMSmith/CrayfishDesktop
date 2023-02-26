@@ -33,6 +33,10 @@ tracked_directories := \
 	$(CONFIG)/nnn \
 	$(CONFIG)/spicetify \
 	$(CONFIG)/polybar \
+	$(CONFIG)/btop \
+	$(CONFIG)/rofi \
+	$(CONFIG)/kitty \
+	$(CONFIG)/fish \
 	$(DATA)/themes \
 	$(DATA)/fonts \
 
