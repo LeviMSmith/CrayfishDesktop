@@ -22,6 +22,7 @@ tracked_files := \
 	$(CONFIG)/i3/config \
 	$(HOME)/.xinitrc \
 	$(HOME)/.bashrc \
+	$(HOME)/.gitconfig \
 
 tracked_directories := \
 	$(CONFIG)/nvim \
