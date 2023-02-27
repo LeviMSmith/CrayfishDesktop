@@ -49,6 +49,8 @@ requisites := \
 	neovim \
 	picom \
 	xorg-xinit \
+	neofetch \
+	feh\
 
 home-tracked_files := $(subst $(HOME),,$(tracked_files))
 home-tracked_directories := $(subst $(HOME),,$(tracked_directories))
@@ -67,7 +69,7 @@ $(home-tracked_directories):
 	cp -ru $(HOME)$@/* $(package_home)$@
 
 install:
-	cp -rub $(package_home)/* $(HOME)/
+	cp -rub $(package_home)/. $(HOME)/
 
 requisites:
 	pacman -S $(requisites)
